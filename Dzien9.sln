@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P01AplikacjaWebowaWstep", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P04Zawodnicy.Shared", "P04Zawodnicy.Shared\P04Zawodnicy.Shared.csproj", "{F4DF1C74-4141-4C64-BB13-1192660E00B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P02Wstawki", "P02Wstawki\P02Wstawki.csproj", "{E0D7F1B5-A79E-4927-82EB-834C99608A26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "P03AplikacjaZawodnicy", "P03AplikacjaZawodnicy\P03AplikacjaZawodnicy.csproj", "{23787A81-E0F0-4258-AB3D-ACCA6467BAAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F4DF1C74-4141-4C64-BB13-1192660E00B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4DF1C74-4141-4C64-BB13-1192660E00B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4DF1C74-4141-4C64-BB13-1192660E00B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D7F1B5-A79E-4927-82EB-834C99608A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D7F1B5-A79E-4927-82EB-834C99608A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D7F1B5-A79E-4927-82EB-834C99608A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D7F1B5-A79E-4927-82EB-834C99608A26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23787A81-E0F0-4258-AB3D-ACCA6467BAAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23787A81-E0F0-4258-AB3D-ACCA6467BAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23787A81-E0F0-4258-AB3D-ACCA6467BAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23787A81-E0F0-4258-AB3D-ACCA6467BAAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
