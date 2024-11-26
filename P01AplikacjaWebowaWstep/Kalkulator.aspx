@@ -8,7 +8,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-      
+     
+    
         <p>Liczba 1</p>
         <asp:TextBox ID="txtLiczba1" runat="server"></asp:TextBox>
         <p>Liczba 2</p>
