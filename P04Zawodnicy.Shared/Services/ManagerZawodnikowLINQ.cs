@@ -123,6 +123,7 @@ namespace P04Zawodnicy.Shared.Services
                     Imie = dane[i].imie,
                     Nazwisko = dane[i].nazwisko,
                     Kraj = dane[i].kraj,
+                    DataUrodzenia = dane[i].data_ur,
                     Wzrost = (int)dane[i].wzrost,
                     Waga = (int)dane[i].waga,
                 };
