@@ -40,7 +40,7 @@
            foreach (var z in Zawodnicy)
            {  %>
 
-           <tr>
+           <tr <%= IdPodswietlanego== z.Id_zawodnika ? "class=\"podswietlony\" " : "" %> >
                <td><a href="SzczegolyZawodnika.aspx?id=<%= z.Id_zawodnika %>"><%= z.ImieNazwisko %></a></td>
                <td><%= z.Kraj %></td>
                <td><%= z.DataUrodzenia?.ToString("dd-MM-yyyy") %></td>

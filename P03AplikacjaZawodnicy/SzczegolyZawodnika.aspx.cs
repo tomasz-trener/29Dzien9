@@ -76,7 +76,7 @@ namespace P03AplikacjaZawodnicy
                 mz.Edytuj(zawodnik);
             }
 
-            Response.Redirect("TabelaZawodnikow.aspx");
+            Response.Redirect($"TabelaZawodnikow.aspx?podswietlonyId={zawodnik.Id_zawodnika}");
         }
 
         protected void btnUsun_Click(object sender, EventArgs e)

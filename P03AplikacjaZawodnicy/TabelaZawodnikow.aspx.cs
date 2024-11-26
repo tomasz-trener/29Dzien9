@@ -12,10 +12,16 @@ namespace P03AplikacjaZawodnicy
     public partial class TabelaZawodnikow : System.Web.UI.Page
     {
         public List<Zawodnik> Zawodnicy { get; set; }
+        public int? IdPodswietlanego { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             IManagerZawodnikow mz = new ManagerZawodnikowLINQ();
             Zawodnicy = mz.WczytajZawodnikow();
+
+            //podswietelenie edytowanego zawodnika 
+            string idPodswietlanego = Request["podswietlonyId"];
+            if (!string.IsNullOrEmpty(idPodswietlanego))
+                IdPodswietlanego = Convert.ToInt32(idPodswietlanego);
         }
     }
 }
