@@ -44,6 +44,11 @@ namespace P04Zawodnicy.Shared.Services
             throw new NotImplementedException();
         }
 
+        public Zawodnik PodajZawodnika(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Zawodnik[] PodajZawodnikow(string kraj)
         {
             return WczytajZawodnikow().ToArray();

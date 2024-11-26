@@ -35,7 +35,7 @@
            {  %>
 
            <tr>
-               <td><a href="SzczegolyZawodnika.aspx"><%= z.ImieNazwisko %></a></td>
+               <td><a href="SzczegolyZawodnika.aspx?id=<%= z.Id_zawodnika %>"><%= z.ImieNazwisko %></a></td>
                <td><%= z.Kraj %></td>
                <td><%= z.DataUrodzenia?.ToString("dd-MM-yyyy") %></td>
                <td><%= z.Wzrost %></td>

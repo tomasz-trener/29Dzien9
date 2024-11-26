@@ -191,6 +191,11 @@ namespace P04Zawodnicy.Shared.Services
         {
             throw new NotImplementedException();
         }
+
+        public Zawodnik PodajZawodnika(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 

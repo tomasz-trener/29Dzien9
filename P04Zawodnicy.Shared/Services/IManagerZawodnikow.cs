@@ -27,5 +27,7 @@ namespace P04Zawodnicy.Shared.Services
         List<Osoba> WyszukajOsoby(string text);
 
         GrupaKraju[] PodajSerdniWzrostDlaKazdegoKraju();
+
+        Zawodnik PodajZawodnika(int id);
     }
 }

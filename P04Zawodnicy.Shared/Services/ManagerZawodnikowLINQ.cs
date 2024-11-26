@@ -187,5 +187,13 @@ namespace P04Zawodnicy.Shared.Services
                     }).ToArray();
             }
         }
+
+        public Zawodnik PodajZawodnika(int id)
+        {
+            using (ModelBazyDataContext db = new ModelBazyDataContext(connString))
+            {
+                return mapujZawodnikow(db.ZawodnikDb.FirstOrDefault(x=>x.id_zawodnika == id)).FirstOrDefault();
+            }
+        }
     }
 }

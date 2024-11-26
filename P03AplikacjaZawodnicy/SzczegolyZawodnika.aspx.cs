@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P04Zawodnicy.Shared.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +12,12 @@ namespace P03AplikacjaZawodnicy
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string idStr = Request["id"];
+            if (!string.IsNullOrEmpty(idStr))
+            {
+                IManagerZawodnikow mz = new ManagerZawodnikowLINQ();
+                var zawodnik = mz.podajzaw
+            }
 
         }
     }
