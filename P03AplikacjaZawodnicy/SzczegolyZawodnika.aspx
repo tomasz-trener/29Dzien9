@@ -64,8 +64,8 @@
                             </div>
                         </div>
 
-                        <asp:Button ID="btnZapisz" CssClass="btn btn-danger" OnClick="btnZapisz_Click" runat="server" Text="Zapisz" />
-
+                        <asp:Button ID="btnZapisz" CssClass="btn btn-primary" OnClick="btnZapisz_Click" runat="server" Text="Zapisz" />
+                        <asp:Button ID="btnUsun" CssClass="btn btn-danger" OnClick="btnUsun_Click" runat="server" Text="Usun" />
                     </form>
                 </div>
         </div>

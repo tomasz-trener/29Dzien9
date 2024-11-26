@@ -11,7 +11,14 @@ namespace P03AplikacjaZawodnicy
 {
     public partial class SzczegolyZawodnika : System.Web.UI.Page
     {
-         
+        enum TrybOperacji
+        {
+            Tworzenie,
+            Edycja
+        }
+
+        private TrybOperacji trybOperacji => string.IsNullOrEmpty(Request["id"]) ? TrybOperacji.Tworzenie : TrybOperacji.Edycja;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string idStr = Request["id"];
@@ -29,6 +36,8 @@ namespace P03AplikacjaZawodnicy
                 txtDataUr.Text = zawodnik.DataUrodzenia?.ToString("dd-MM-yyyy");
             }
 
+            btnUsun.Visible = trybOperacji == TrybOperacji.Edycja;
+
         }
 
         protected void btnZapisz_Click(object sender, EventArgs e)
@@ -40,12 +49,27 @@ namespace P03AplikacjaZawodnicy
             zawodnik.DataUrodzenia = Convert.ToDateTime(txtDataUr.Text);
             zawodnik.Waga = Convert.ToInt32(txtWaga.Text);
             zawodnik.Wzrost = Convert.ToInt32(txtWzrost.Text);
-
-            zawodnik.Id_zawodnika = Convert.ToInt32(txtId.Text);
-
             IManagerZawodnikow mz = new ManagerZawodnikowLINQ();
-            mz.Edytuj(zawodnik);
 
+
+            if(trybOperacji == TrybOperacji.Tworzenie)
+            {
+                mz.Dodaj(zawodnik);
+            }
+            else if (trybOperacji == TrybOperacji.Edycja)
+            {
+                zawodnik.Id_zawodnika = Convert.ToInt32(txtId.Text);
+                mz.Edytuj(zawodnik);
+            }
+
+            Response.Redirect("TabelaZawodnikow.aspx");
+        }
+
+        protected void btnUsun_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtId.Text);
+            IManagerZawodnikow mz = new ManagerZawodnikowLINQ();
+            mz.Usun(id);
             Response.Redirect("TabelaZawodnikow.aspx");
         }
     }
