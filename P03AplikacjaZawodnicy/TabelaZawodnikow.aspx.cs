@@ -16,12 +16,23 @@ namespace P03AplikacjaZawodnicy
         protected void Page_Load(object sender, EventArgs e)
         {
             IManagerZawodnikow mz = new ManagerZawodnikowLINQ();
+
+            //usuwanie (przed wczytywaniem)
+            string idUsuwanegoStr = Request["idUsuwanego"];
+            if (!string.IsNullOrEmpty(idUsuwanegoStr))
+            {
+                int idUsuwanego = Convert.ToInt32(idUsuwanegoStr);
+                mz.Usun(idUsuwanego);
+            }
+
             Zawodnicy = mz.WczytajZawodnikow();
 
             //podswietelenie edytowanego zawodnika 
             string idPodswietlanego = Request["podswietlonyId"];
             if (!string.IsNullOrEmpty(idPodswietlanego))
                 IdPodswietlanego = Convert.ToInt32(idPodswietlanego);
+
+           
         }
     }
 }
