@@ -64,6 +64,16 @@
                             </div>
                         </div>
 
+                          <div class="row">
+                              <div class="col-md-12 pr-1">
+                                  <div class="form-group">
+                                      <label>Trener</label>
+                                      <asp:DropDownList ID="ddlTrener" CssClass="form-control" runat="server"></asp:DropDownList>
+                                  </div>
+                              </div>
+                             
+                          </div>
+
                         <asp:Button ID="btnZapisz" CssClass="btn btn-primary" OnClick="btnZapisz_Click" runat="server" Text="Zapisz" />
                         <asp:Button ID="btnUsun" CssClass="btn btn-danger" OnClick="btnUsun_Click" runat="server" Text="Usun" />
                     </form>
