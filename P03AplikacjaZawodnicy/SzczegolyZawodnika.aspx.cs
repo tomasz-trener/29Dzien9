@@ -21,6 +21,8 @@ namespace P03AplikacjaZawodnicy
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            WczytajTrenerow();
+          
             string idStr = Request["id"];
             if (!string.IsNullOrEmpty(idStr) && !Page.IsPostBack)
             {
@@ -35,10 +37,10 @@ namespace P03AplikacjaZawodnicy
                 txtWzrost.Text = Convert.ToString(zawodnik.Wzrost);
                 txtDataUr.Text = zawodnik.DataUrodzenia?.ToString("dd-MM-yyyy");
 
-                WczytajTrenerow();
+               
                 ddlTrener.SelectedValue = zawodnik.Id_trenera.ToString();
             }
-
+           
             btnUsun.Visible = trybOperacji == TrybOperacji.Edycja;
 
         }
@@ -65,10 +67,18 @@ namespace P03AplikacjaZawodnicy
             zawodnik.Id_trenera = Convert.ToInt32(ddlTrener.SelectedValue);
             IManagerZawodnikow mz = new ManagerZawodnikowLINQ();
 
+           
 
             if(trybOperacji == TrybOperacji.Tworzenie)
             {
                 mz.Dodaj(zawodnik);
+
+                List<int> nowoDodaniZawodnicy = (List<int>)Session["nowoDodaniZawodnicy"];
+                if(nowoDodaniZawodnicy == null)
+                    nowoDodaniZawodnicy = new List<int>();
+
+                nowoDodaniZawodnicy.Add(zawodnik.Id_zawodnika);
+                Session["nowoDodaniZawodnicy"] = nowoDodaniZawodnicy;
             }
             else if (trybOperacji == TrybOperacji.Edycja)
             {

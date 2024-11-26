@@ -1,6 +1,38 @@
+1) konfiguracja zaufanego servera localhost po https: 
+
+W przypadku b³êdu niepoprawnego certyfikatu wystawionego przez serwer 
+	wystarczy uruchomic przeglarke ponownie po zainstalowaniu certyffikatu 
+
+	
+2) Poznaliœmy ró¿nice w kontrolkach asp i html 
+	- stworzenie kalkulator.aspx
+
+3) poznaliœmy wstawki w asp <% %>  (bez szablonu) 
+	- wyœwietlenie zawodników w tabeli 
+
+4) Stworzenie projektu P03AplikacjaZawodnicy (z szablonem)
+	- wyœwietliliœmy zawodników z bazy jako strona niezale¿na (bez mastera) ale tym razem z szablonem HTML 
+	- dodaliœmy master page i stworzyliœmy TabelaZawodnikow.aspx, która bazuje na masterpage 
+
+5) Dodaliœmy operacje CRUD na zawodnikach 
+	- szczegó³y zawodnika
+	- edycja (pamiêtaæ o postback)
+	- usuwanie
+	- tworzenie nowego 
 
 
-Zadanie: po zapisanu zmian w zawodniku, zawodnik, który zosta³ zapisany powinien byæ podœwietlony
+6) Dodaj opcje wyœwietalnia trenera z mo¿liwoœci¹ podmiany trenera dla zawodnika
 
-Zadanie: dodaj opcje usuwania zawodników - bezpoœrednio z formularza listy zawodników. 
+
+7) Zadanie: po zapisanu zmian w zawodniku, zawodnik, który zosta³ zapisany powinien byæ podœwietlony
+
+8) Zadanie: dodaj opcje usuwania zawodników - bezpoœrednio z formularza listy zawodników. 
 	- dodaj now¹ kolumnê o nazwie Akcje z odnoœnikiem "Usuñ", po klkniêciu którego nast¹pi usuniêcie danego zawodnika 
+
+
+9) Zadanie: Po dodaniu nowego zawodnika, ten zawodnik powinien podswietlaæ siê na zielono
+	- gdy dodamy kolejnego zawodnika to wszyscy ostatnio dodani zawodnicy bed¹ podswietleni 
+	- informacje o nowododanych zawodnika tym razem bedziemy przechowywaæ w sesji 
+	- Z sesji korzystamy tak samo jak request czyli ustawienie sesji to Session["klucz"] = "Wartoœæ" 
+		oraz pobranie z sesji to var wartosc = Session["klucz"]; 
+

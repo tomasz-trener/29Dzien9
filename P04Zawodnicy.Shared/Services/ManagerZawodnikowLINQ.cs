@@ -26,6 +26,7 @@ namespace P04Zawodnicy.Shared.Services
                 mapujNaZawodnikaDb(z, zb);
                 db.ZawodnikDb.InsertOnSubmit(zb);
                 db.SubmitChanges();
+                z.Id_zawodnika = zb.id_zawodnika;
             }           
         }
 

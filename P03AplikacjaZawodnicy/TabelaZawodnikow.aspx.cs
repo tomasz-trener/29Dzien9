@@ -13,6 +13,7 @@ namespace P03AplikacjaZawodnicy
     {
         public List<Zawodnik> Zawodnicy { get; set; }
         public int? IdPodswietlanego { get; set; }
+        public List<int> NowoDodaniZawodnicy { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
             IManagerZawodnikow mz = new ManagerZawodnikowLINQ();
@@ -32,6 +33,9 @@ namespace P03AplikacjaZawodnicy
             if (!string.IsNullOrEmpty(idPodswietlanego))
                 IdPodswietlanego = Convert.ToInt32(idPodswietlanego);
 
+            //podswietlenie nowo dodanych
+            if (Session["nowoDodaniZawodnicy"]!= null)
+                NowoDodaniZawodnicy = Session["nowoDodaniZawodnicy"] as List<int>;
            
         }
     }
